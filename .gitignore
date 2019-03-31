@@ -1,0 +1,13 @@
+data/*
+nlp_base/*
+.idea/*
+*.log
+jieba_git/*
+*.pyc
+*.txt
+*.dat
+*.data
+*.pyc
+*.text
+*.xml
+
