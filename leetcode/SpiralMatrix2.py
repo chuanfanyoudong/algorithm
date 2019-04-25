@@ -53,5 +53,34 @@ class Solution(object):
         return result
 
 
+39 VIEWS
+
+class Solution(object):
+    def generateMatrix(self, n):
+        """
+        :type n: int
+        :rtype: List[List[int]]
+        """
+		res = [[0]*n for i in range(n)]
+		i = 1
+		j = 1                                   # moving steps
+		x = 0;y = -1                            # initial position
+		flag = 0                                # control the direction
+		dir = [[0,1],[1,0],[0,-1],[-1,0]]       # 4 directions(right,down,left,up)
+		x_step,y_step = dir[flag]
+		count = 2*n
+		while i <= n**2:
+			x += x_step                         # move to next position
+			y += y_step
+			if j == count//2:                   # change the direction and initialize the moving steps
+				j = 0
+				flag = (flag+1)%4
+				x_step,y_step = dir[flag]
+				count -= 1
+			res[x][y] = i
+			i += 1
+			j += 1
+		return res
+
 if __name__ == '__main__':
     print(Solution().generateMatrix(3))

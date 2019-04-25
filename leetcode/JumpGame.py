@@ -16,6 +16,7 @@ class Solution(object):
         m = 0
         for i, n in enumerate(nums):
             if i > m:
+            # 这说明i的位置m永远到不了
                 return False
             m = max(m, i + n)
         return True

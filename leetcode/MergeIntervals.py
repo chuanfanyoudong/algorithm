@@ -22,6 +22,7 @@ class Solution(object):
         out = []
         for i in sorted(intervals, key=lambda i: i.start):
             if out and i.start <= out[-1].end:
+                # 这里很精髓
                 out[-1].end = max(i.end. out[-1].end)
             else:
                 out.append(i)

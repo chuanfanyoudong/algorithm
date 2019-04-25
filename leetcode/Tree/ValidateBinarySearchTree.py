@@ -53,7 +53,7 @@ class Solution(object):
         :rtype: bool
         """
     # 最好理解的一个方法是先对这棵树进行中序遍历，然后，依次比较遍历后的结果，后一个值比前一个值大就可以
-    # def isVailable(self, root):
+    def isVailable(self, root):
         if root is None:
             return True
         if root.left == None and root.right == None:

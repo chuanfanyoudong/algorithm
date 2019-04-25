@@ -37,3 +37,11 @@ class Solution:
         head = p.next
         p.next = None
         return head
+
+
+if __name__ == '__main__':
+    head = ListNode(0)
+    head.next = ListNode(1)
+    head.next.next = ListNode(2)
+    head.next.next.next = ListNode(3)
+    Solution().rotateRight(head, 2)
