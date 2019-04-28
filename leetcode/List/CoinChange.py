@@ -27,6 +27,6 @@ class Solution(object):
         return dp_list[-1]
 
 if __name__ == '__main__':
-    coins = [3]
-    amount = 2
+    coins = [1,2,3]
+    amount = 6
     print(Solution().coinChange(coins, amount))
