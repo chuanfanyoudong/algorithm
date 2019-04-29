@@ -1,8 +1,7 @@
 """
+找出数组中第K大的值
+用的是快拍的思路
 @author: zkjiang
-@contact: jiang_zhenkang@163.com
-@software: PyCharm
-@file: KthLargestElementinanArray.py
 @time: 2019/4/29 6:55
 """
 
@@ -26,23 +25,25 @@ class Solution(object):
                 return nums[partion]
             if partion > len(nums) - k:
                 # 说明超过了，也就是
-                right = right - partion
+                right = partion
             if partion < len(nums) - k:
                 left = partion + 1
 
 
     def helper(self, nums, left, right):
-        i = left
-        j = left
+        # 作用就是返回的值k的意义为：第k个index的值右边的都比它大，左边的都比它小
+        i = left + 1
+        j = left + 1
         base = nums[left]
         while j < right:
             if nums[j] < base:
                 nums[j], nums[i] = nums[i], nums[j]
                 i += 1
             j += 1
-        return i
+        nums[left], nums[i-1] = nums[i-1], nums[left]
+        return i - 1
 
 if __name__ == '__main__':
-    tmp_list =  [3,2,1,5,6,4]
+    tmp_list =  [7,6,5,4,3,2,1]
     k = 2
     print(Solution().findKthLargest(tmp_list,k))
