@@ -1,8 +1,7 @@
 """
+找出数组中的最大子数组
+用动态规划
 @author: zkjiang
-@contact: jiang_zhenkang@163.com
-@software: PyCharm
-@file: MaximumSubarray.py
 @time: 2019/2/23 20:56
 """
 

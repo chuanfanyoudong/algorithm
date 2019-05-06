@@ -85,6 +85,9 @@ class Solution(object):
         """
         # 最好理解的一个方法是先对这棵树进行中序遍历，然后，依次比较遍历后的结果，后一个值比前一个值大就可以
         # 这里就是设计一个pre值，记录pre值，保证pre老是小于当前root
+        # 这里pre的意义就是遍历root的时候，pre就是root.left
+        # 遍历root.right的时候，pre就是root
+        # 遍历root.left的时候，pre就是root.left.left的最右节点
         if root is None:
             return True
         # 输出左子树的遍历结果

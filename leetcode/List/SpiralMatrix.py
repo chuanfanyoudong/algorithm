@@ -1,8 +1,6 @@
 """
+旋转矩阵，可以利用pop操作去做
 @author: zkjiang
-@contact: jiang_zhenkang@163.com
-@software: PyCharm
-@file: SpiralMatrix.py
 @time: 2019/2/23 21:02
 """
 

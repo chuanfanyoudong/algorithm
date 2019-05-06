@@ -1,8 +1,6 @@
 """
+动态规划！！
 @author: zkjiang
-@contact: jiang_zhenkang@163.com
-@software: PyCharm
-@file: MinimumPathSum.py
 @time: 2019/2/26 21:26
 """
 test = [

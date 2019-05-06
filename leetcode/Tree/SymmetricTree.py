@@ -55,4 +55,25 @@ class Solution(object):
         # 返回left的左边和right的右边的结果与left的右边和right的左边的结果的并
         return self.ismirror(left.left, right.right) and self.ismirror(left.right, right.left)
 
+    def isSymmetric1(self, root):
+        """
+        用stack非递归
+        也可以用队列做
+        :type root: TreeNode
+        :rtype: bool
+        """
+        if root == None:
+            return True
+        stack = [(root.left, root.right)]
+        while stack:
+            left, right = stack.pop()
+            if left == None and right == None:
+                continue
+            if left == None or right == None:
+                return False
+            if left.val != right.val:
+                return False
+            stack.append((left.left, right.right))
+            stack.append((left.right, right.left))
+        return True
 
